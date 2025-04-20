@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Activation</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6;">
+<h2>Account Activation</h2>
+<p>Hi <strong th:text="${username}"></strong>,</p>
+
+<p>Thank you for registering! Please use the following activation code to activate your account:</p>
+
+<h3 style="color: blue;" th:text="${activation_code}"></h3>
+
+<p>Alternatively, you can activate your account by clicking the link below:</p>
+
+<p>
+    <a th:href="${confirmationUrl}"
+       style="display: inline-block; padding: 10px 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">
+        Activate Your Account
+    </a>
+</p>
+
+<p>If you didn't request this, please ignore this email.</p>
+
+<p>Best Regards,<br/>Mphasis</p>
+</body>
+</html>
